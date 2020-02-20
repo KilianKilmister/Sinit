@@ -1,0 +1,99 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:node/recommended",
+    "plugin:import/recommended",
+    "plugin:eslint-comments/recommended"
+  ],
+  "env": {
+    "node": true
+  },
+  "root": true,
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "markdown",
+    "deprecate",
+    "json-format",
+    "node",
+    "import",
+    "eslint-comments",
+    "no-secrets",
+    "no-loops"
+  ],
+  "settings": {
+    "json/sort-package-json": "pro"
+  },
+  "rules": {
+    "space-in-parens": [
+        1,
+        "always"
+    ],
+    "space-infix-ops": ["error", { "int32Hint": false }],
+    "space-unary-ops": [2, {"words": true, "nonwords": false}],
+    "no-unexpected-multiline": 2,
+    "no-loops/no-loops": 2,
+    "array-bracket-spacing": ["error", "never"],
+    "block-spacing": "error",
+    "no-restricted-syntax": [
+      "error",
+      {
+        "selector": "SequenceExpression",
+        "message": "The comma operator is confusing and a common mistake."
+      }
+    ],
+    "semi": ["error", "never"],
+    "object-curly-spacing": ["error", "always", { "arraysInObjects": false, "objectsInObjects": false }],
+    "quotes": [2, "single", "avoid-escape"],
+    "no-unused-vars": [
+      2,
+      {
+        "vars": "all",
+        "args": "none"
+      }
+    ],
+    "eqeqeq": [2, "smart"],
+    "key-spacing": [
+      2,
+      {
+        "beforeColon": false,
+        "afterColon": true
+      }
+    ],
+    "keyword-spacing": 2,
+    "lines-around-comment": [
+      "error",
+      {
+        "beforeBlockComment": true,
+        "afterBlockComment": false,
+        "beforeLineComment": true,
+        "afterLineComment": false,
+        "allowBlockStart": false,
+        "allowBlockEnd": true,
+        "allowObjectStart": false,
+        "allowObjectEnd": true,
+        "allowArrayStart": false,
+        "allowArrayEnd": true
+      }
+    ],
+    "space-before-function-paren": ["error", "never"],
+    "space-before-blocks": ["error", "always"],
+    "multiline-comment-style": [2, "bare-block"],
+    "spaced-comment": ["error", "always"],
+    // "max-len": ["error", { "code": 80, "ignoreUrls": true }],
+    "no-secrets/no-secrets": [
+      "error",
+      {
+        "additionalRegexes": {
+          "Basic Auth": "Authorization: Basic [A-Za-z0-9+/=]*"
+        }
+      }
+    ]
+  }
+}

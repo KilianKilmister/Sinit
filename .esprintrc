@@ -1,0 +1,12 @@
+{
+  "paths": [
+    "*.js",
+    "*.json"
+  ],
+  "ignored": [
+    "**/node_modules/**/*",
+    "package-lock.json"
+  ],
+  "port": 5004,
+  "formatter": "git-log"
+}

@@ -1,20 +1,16 @@
 {
-  "name": "ginit",
-  "version": "1.0.0",
+  "name": "sinit",
+  "version": "0.1.0",
   "description": "'git init' on steroids",
   "main": "index.js",
-  "bin": {
-    "ginit": "./index.js"
-  },
   "scripts": {
+    "count-rules": "eslint-index .eslintrc --format number",
+    "fix-directory": "eslint . --fix --ext .json,.js",
+    "lint-directory": "eslint . --ext .json,.js",
+    "nibble": "eslint-nibble . --ext .json,.js",
+    "table-rules": "eslint-index .eslintrc --format table",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "Git",
-    "CLI"
-  ],
-  "author": "Slick Kilmister",
-  "license": "ISC",
   "dependencies": {
     "@octokit/auth-basic": "^1.4.0",
     "@octokit/rest": "^16.43.1",
@@ -22,11 +18,51 @@
     "clear": "^0.1.0",
     "clui": "^0.3.6",
     "configstore": "^5.0.1",
+    "esprint": "^0.6.0",
     "figlet": "^1.2.4",
+    "fuzzy": "^0.1.3",
     "inquirer": "^7.0.4",
+    "inquirer-autocomplete-prompt": "^1.0.2",
+    "inquirer-checkbox-plus-prompt": "^1.0.1",
+    "jshint": "^2.11.0",
     "lodash": "^4.17.15",
     "minimist": "^1.2.0",
+    "npm": "^6.13.7",
     "simple-git": "^1.131.0",
     "touch": "^3.1.0"
-  }
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-formatter-git-log": "^0.5.3",
+    "eslint-index": "^1.5.0",
+    "eslint-nibble": "^5.1.0",
+    "eslint-plugin-deprecate": "^0.7.0",
+    "eslint-plugin-eslint-comments": "^3.1.2",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-json": "^2.0.1",
+    "eslint-plugin-json-format": "^2.0.1",
+    "eslint-plugin-markdown": "^1.0.1",
+    "eslint-plugin-no-loops": "^0.3.0",
+    "eslint-plugin-no-secrets": "^0.3.4",
+    "eslint-plugin-node": "^11.0.0",
+    "markdown-it": "^10.0.0",
+    "markdown-it-footnote": "^3.0.2",
+    "markdown-it-sub": "^1.0.0",
+    "markdown-it-sup": "^1.0.0"
+  },
+  "bin": {
+    "sinit": "./index.js"
+  },
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KilianKilmister/Sinit"
+  },
+  "author": "Slick Kilmister",
+  "keywords": [
+    "Git",
+    "CLI"
+  ],
+  "email": "kilian@catsoft.ch"
 }
